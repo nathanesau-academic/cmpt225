@@ -6,10 +6,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestRushHour",
+            "request": "launch",
+            "mainClass": "TestRushHour",
+            "projectName": "assignments_b57d7565",
+            "cwd": "${workspaceFolder}/hw1-solution/src"
+        },
+        {
+            "type": "java",
             "name": "Launch TestIterators",
             "request": "launch",
             "mainClass": "TestIterators",
-            "projectName": "assignments_b57d7565"
+            "projectName": "assignments_b57d7565",
+            "cwd": "${workspaceFolder}/hw1-solution/src"
         },
         {
             "type": "java",

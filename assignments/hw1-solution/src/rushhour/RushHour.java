@@ -13,7 +13,7 @@ public class RushHour
 
 	public final static int SIZE = 6;
 
-
+	char[][] board = new char[6][6];
 	
 	/**
 	 * @param fileName
@@ -21,7 +21,21 @@ public class RushHour
 	 * @throws Exception if the file not found or the board is bad
 	 */
 	public RushHour(String fileName) throws Exception {
-		// TODO implement me
+		File file = new File(fileName);
+		if(!file.exists()) {
+			throw new FileNotFoundException("File " + fileName + " not found");
+		}
+
+		Scanner scanner = new Scanner(file);
+		int lineNum = 0;
+		while (scanner.hasNextLine()) {
+			String line = scanner.nextLine();
+			for (int i = 0; i < 6; i++) {
+				board[lineNum][i] = line.charAt(i);
+			}
+			lineNum += 1;
+		}
+		scanner.close();
 	}
 	
 	/**
