@@ -39,7 +39,7 @@ public class FibonacciIterator implements IntegerIterator
 			n += 1;
 			return a1;
 		}
-		else { // n > 2
+		else { // n >= 2
 			int c = b + a;
 			a = b;
 			b = c;
