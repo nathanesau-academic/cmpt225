@@ -1,10 +1,9 @@
-import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.Scanner; // Import the Scanner class to read text files
 
+import rushhour.IllegalMoveException;
 import rushhour.RushHour;
 
-
+ 
 public class TestRushHour
 {
 	public static void testReadFromFile1() {
@@ -90,10 +89,14 @@ public class TestRushHour
 			//	.D....
 			//	.EE...
 			game.makeMove('X', RushHour.RIGHT, 2);
-			System.out.println("testMoves2 Failed: illigal move not caught");
+			System.out.println("testMoves2 Failed: illegal move not caught");
+		}
+		catch (IllegalMoveException ime) {
+			System.out.println("testMoves2 Ok: illegal move exception: " + ime);
+			ime.printStackTrace();
 		}
 		catch (Exception e) {
-			System.out.println("testMoves2 Failed with exception: " + e);
+			System.out.println("testMoves2 Failed with an unexpected exception: " + e);
 			e.printStackTrace();
 		}
 		
