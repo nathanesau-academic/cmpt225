@@ -1,0 +1,13 @@
+# run after zip_submission
+unzip assignment1.zip
+
+cd assignment1
+
+javac TestIterators.java
+javac TestRushHour.java
+
+java TestIterators
+java TestRushHour
+
+cd ..
+rm -rf assignment1
