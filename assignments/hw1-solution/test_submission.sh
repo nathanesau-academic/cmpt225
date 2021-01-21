@@ -1,3 +1,4 @@
+#!/bin/bash
 # run after zip_submission
 mkdir tmp
 cp assignment1.zip tmp
