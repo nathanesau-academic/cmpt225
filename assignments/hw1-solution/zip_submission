@@ -1,19 +1,28 @@
-rm -rf assignment1
-mkdir -p assignment1/src
-mkdir -p assignment1/src/myiterators
-mkdir -p assignment1/src/rushhour
+mkdir tmp
+cd tmp
+
+mkdir -p src
+mkdir -p src/myiterators
+mkdir -p src/rushhour
 
 # solution files
-cp -r src/myiterators/ArrayIterator.java assignment1
-cp -r src/myiterators/FibonacciIterator.java assignment1
-cp -r src/myiterators/RangeIterator.java assignment1
-cp -r src/rushhour/RushHour.java assignment1
-cp -r src/rushhour/IllegalMoveException.java assignment1
+cp ../src/myiterators/ArrayIterator.java src/myiterators
+cp ../src/myiterators/FibonacciIterator.java src/myiterators
+cp ../src/myiterators/RangeIterator.java src/myiterators
+cp ../src/rushhour/RushHour.java src/rushhour
+cp ../src/rushhour/IllegalMoveException.java src/rushhour
 
-# test files (optional)
-cp -r src/*.java assignment1
-cp -r src/*.txt assignment1
+# provided files (optional)
+cp ../src/myiterators/IntegerIterator.java src/myiterators
+cp ../src/TestRushHour.java src
+cp ../src/TestIterators.java src
+cp ../src/board1.txt src
+cp ../src/badboard.txt src
 
 # zip files
-zip -r assignment1 assignment1
-rm -rf assignment1
+zip -r assignment1.zip src
+rm -rf src
+
+cd ..
+cp tmp/assignment1.zip assignment1.zip
+rm -rf tmp

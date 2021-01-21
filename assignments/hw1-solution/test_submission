@@ -1,8 +1,10 @@
 # run after zip_submission
+mkdir tmp
+cp assignment1.zip tmp
+cd tmp
 unzip assignment1.zip
 
-cd assignment1
-
+cd src
 javac TestIterators.java
 javac TestRushHour.java
 
@@ -10,4 +12,5 @@ java TestIterators
 java TestRushHour
 
 cd ..
-rm -rf assignment1
+cd ..
+rm -rf tmp
