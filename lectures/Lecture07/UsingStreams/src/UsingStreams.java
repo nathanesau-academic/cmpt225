@@ -163,7 +163,7 @@ public class UsingStreams {
 
 	}
 
-	public static void useParallel() {
+	/*public static void useParallel() {
 		GroceryItem groceryList[] = new GroceryItem[9];
 		groceryList[0] = new GroceryItem("Milk", 3, 4.32);
 		groceryList[1] = new GroceryItem("Yogurt", 2, 1.17);
@@ -233,7 +233,7 @@ public class UsingStreams {
 				
 		
 
-	}
+	}*/
 	
 	public static void main(String[] args) {
 		useStreams();
