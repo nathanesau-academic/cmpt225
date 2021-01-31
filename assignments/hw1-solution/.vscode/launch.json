@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "TestRushHour",
             "projectName": "assignments_b57d7565",
-            "cwd": "${workspaceFolder}/hw1-solution/src"
+            "cwd": "${workspaceFolder}/src"
         },
         {
             "type": "java",
@@ -18,7 +18,7 @@
             "request": "launch",
             "mainClass": "TestIterators",
             "projectName": "assignments_b57d7565",
-            "cwd": "${workspaceFolder}/hw1-solution/src"
+            "cwd": "${workspaceFolder}/src"
         },
         {
             "type": "java",

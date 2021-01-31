@@ -1,0 +1,6 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "problems.decorations.enabled": false,
+    "outline.problems.enabled": false,
+    "problems.autoReveal": false
+}
