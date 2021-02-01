@@ -31,16 +31,16 @@ public class CircularLinkedList<T> {
 		return null;
 	}
 
-	public T setValue(T element) {
+	public T setValue(T value) {
 		// TODO implement me
 		return null;
 	}
 
-	public void addBefore(T element) {
+	public void addBefore(T value) {
 		// TODO implement me
 	}
 
-	public void addAfter(T element) {
+	public void addAfter(T value) {
 		// TODO implement me
 	}
 
