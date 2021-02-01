@@ -190,6 +190,12 @@ public class CircularLinkedList<T> {
 			current.prev.next = current;
 		}
 		
+		// special case: only one element left (no loop)
+		if (current.next == current || current.prev == current) {
+			current.next = null;
+			current.prev = null;
+		}
+
 		return data;
 	}
 
@@ -217,6 +223,12 @@ public class CircularLinkedList<T> {
 		if (current.next != null) {
 			// update both directions of link
 			current.next.prev = current;
+		}
+
+		// special case: only one element left (no loop)
+		if (current.next == current || current.prev == current) {
+			current.next = null;
+			current.prev = null;
 		}
 
 		return data;
