@@ -49,6 +49,17 @@ task copyMyStack(type: Copy) {
 	into 'tmp/src/mystack'
 }
 
+task copyTests(type: Copy) {
+	from 'src/main/java/TestCircularLinkedList.java'
+	into 'tmp/src'
+
+	from 'src/main/java/TestLinkedListReachableNodes.java'
+	into 'tmp/src'
+
+	from 'src/main/java/TestMyStackOperations.java'
+	into 'tmp/src'
+}
+
 task zipTmp(type: Zip) {
 	from "tmp"
 	destinationDir = file(".")
@@ -60,5 +71,10 @@ task deleteTmp(type: Delete) {
 }
 
 // creates assignment2.zip in current folder
-task createSubmission(dependsOn: ['copyAssignment2', 'copyMyStack', 'zipTmp', 'deleteTmp'])
+task createSubmission(dependsOn: ['copyAssignment2', 'copyMyStack', 'copyTests', 'zipTmp', 'deleteTmp'])
+zipTmp.mustRunAfter copyAssignment2
+zipTmp.mustRunAfter copyMyStack
+zipTmp.mustRunAfter copyTests
+copyTests.mustRunAfter copyAssignment2
+copyTests.mustRunAfter copyMyStack
 deleteTmp.mustRunAfter zipTmp
