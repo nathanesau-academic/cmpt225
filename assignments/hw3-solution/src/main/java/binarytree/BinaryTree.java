@@ -96,9 +96,73 @@ public class BinaryTree<T> {
 	 * @return
 	 */
 	public Iterator<T> inOrderIterator() {
-		// TODO implement me
-		// may use an inner class or a standalone class in a separate file
-		return null;
+		
+		@SuppressWarnings("hiding")
+		class InOrderIterator<T> implements Iterator<T> {
+
+			BTNode<T> node;
+
+			Set<BTNode<T>> visited = new HashSet<BTNode<T>>();
+
+			public InOrderIterator(BinaryTree<T> tree) {				
+				this.node = tree.getRoot();
+			}
+
+			// returns the next node (would be static if allowed)
+			public BTNode<T> advance(BTNode<T> node, Set<BTNode<T>> visited) {
+				if (node == null) {
+					return null;
+				}
+
+				while (node.getLeftChild() != null && !visited.contains(node.getLeftChild())) {
+					node = node.getLeftChild();
+				}
+
+				if (!visited.contains(node)) {
+					return node;
+				}
+
+				// NOTE: left no longer an option
+				if (node.getRightChild() != null && !visited.contains(node.getRightChild())) {
+					return advance(node.getRightChild(), visited);
+				}
+
+				// NOTE: right no longer an option
+				if (node.getParent() != null && !visited.contains(node.getParent())) {
+					node = node.getParent();
+				}
+
+				if (!visited.contains(node)) {
+					return node;
+				}
+
+				if (node.getParent() != null) {
+					return advance(node.getParent(), visited);
+				}
+
+				return null;
+			}
+
+			@Override
+			public boolean hasNext() {
+				BTNode<T> next = advance(node, visited);
+				return next != null;
+			}
+
+			@Override
+			public T next() { // note: returns null if no next element
+				node = advance(node, visited);
+				if (node == null) {
+					return null;
+				}
+				visited.add(node);
+				return node.getData();
+			}
+
+		}
+
+		Iterator<T> it = new InOrderIterator<T>(this);
+		return it;
 	}
 
 }
