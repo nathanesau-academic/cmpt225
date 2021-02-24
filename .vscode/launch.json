@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestCircularLinkedList",
+            "request": "launch",
+            "mainClass": "TestCircularLinkedList",
+            "projectName": "assignment2"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestLinkedListReachableNodes",
+            "request": "launch",
+            "mainClass": "TestLinkedListReachableNodes",
+            "projectName": "assignment2"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestMyStackOperations",
+            "request": "launch",
+            "mainClass": "TestMyStackOperations",
+            "projectName": "assignment2"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyStackOperations",
+            "request": "launch",
+            "mainClass": "assignment2.MyStackOperations",
+            "projectName": "assignment2"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestArithmeticExpressions",
+            "request": "launch",
+            "mainClass": "TestArithmeticExpressions"
+        }
+    ]
+}
