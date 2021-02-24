@@ -1,6 +1,7 @@
 package binarytree;
 
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class BinaryTree<T> {
 
@@ -78,13 +79,38 @@ public class BinaryTree<T> {
 	/**
 	 * 
 	 * gets inOrder and preOrder of a binary tree and recovers the tree
-	 * @param inOrder
-	 * @param preOrder
-	 * @return
+	 * @param <T> the data type for the tree.
+	 * @param preOrder pre-order traversal for the tree.
+	 * @param inOrder in-order traversal for the tree.
+	 * @return the binary tree corresponding to the in-order and pre-order traversal.
 	 */
-	public static <T> BinaryTree<T> createFromPreorderInorder(List<T> inOrder, List<T> preOrder) {
-		// TODO implement me
-		return null;
+	public static <T> BinaryTree<T> createFromPreorderInorder(List<T> preOrder, List<T> inOrder) {
+		
+		class Helper {
+			BTNode<T> construct_tree(List<T> preOrder, List<T> inOrder, BTNode<T> parent) {
+				if (inOrder.isEmpty()) {
+					return null;
+				}
+				
+				T data = preOrder.remove(0);
+				BTNode<T> root = new BTNode<T>(data);		
+				int index = IntStream.range(0, inOrder.size())
+					.filter(i -> inOrder.get(i) == data).findFirst().orElse(-1);
+				if (index != -1 && index > 0) {
+					root.setLeftChild(construct_tree(preOrder, inOrder.subList(0, index), root));
+				}
+				if (index != -1 && index + 1 < inOrder.size()) {
+					root.setRightChild(construct_tree(preOrder, inOrder.subList(index+1, inOrder.size()), root));
+				}
+				return root;
+			}
+		}
+
+		Helper helper = new Helper();
+		ArrayList<T> preOrderClone = new ArrayList<T>(preOrder);
+		ArrayList<T> inOrderClone = new ArrayList<T>(inOrder);
+		BTNode<T> root = helper.construct_tree(preOrderClone, inOrderClone, null);
+		return new BinaryTree<T>(root);
 	}
 
 	/**
@@ -93,7 +119,7 @@ public class BinaryTree<T> {
 	 * If after the iterator is created, and the tree changes in some part
 	 * that has not been processed by the iterator, then the iterator will see these changes
 	 * and output the values in the updated tree 
-	 * @return
+	 * @return the in-order iterator for the tree.
 	 */
 	public Iterator<T> inOrderIterator() {
 		

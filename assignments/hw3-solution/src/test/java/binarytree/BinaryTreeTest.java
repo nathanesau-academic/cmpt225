@@ -183,9 +183,11 @@ public class BinaryTreeTest {
         List<Integer> inorder = Arrays.asList(1,2,3,4,5,6);
         BinaryTree<Integer> tree = BinaryTree.createFromPreorderInorder(preorder, inorder);
 
+        printTree(tree);
+
         assert(tree != null);
         assert(tree.getRoot() != null && tree.getRoot().getData() == 3);
-        assert(tree.getRoot().getLeftChild() != null && tree.getRoot().getRightChild().getData() == 2);
+        assert(tree.getRoot().getLeftChild() != null && tree.getRoot().getLeftChild().getData() == 2);
         assert(tree.getRoot().getLeftChild().getRightChild() == null);
     }
 
