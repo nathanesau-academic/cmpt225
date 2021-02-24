@@ -16,9 +16,21 @@ Lecture Links:
 * [x] Lecture 07: https://youtu.be/_OMGB-lIJec
 * [x] Lecture 08: https://youtu.be/p8pZa1E3cxc
 * [x] Lecture 09: https://youtu.be/eHliWOO7bEw
+* [x] Lecture 10: https://youtu.be/C-_hirDfHrQ
+* [x] Lecture 11: https://youtu.be/daHUpPOlIX4
+* [x] Lecture 12: https://youtu.be/RAdZ7gwHr00
+* [x] Lecture 13: https://youtu.be/kZFO_2fMnCc
+* [x] Lecture 14: https://youtu.be/b_I5cInsDLs
+* [x] Lecture 15: https://youtu.be/rvYXdS5b3fM
+* [x] Lecture 16: https://youtu.be/I6cvshQDurk
+* [x] Lecture 17: https://youtu.be/HqPrtyBB9Ro
 
 Tutorial Links:
 
 * [x] Tutorial 01: https://youtu.be/7MtmRLAdLeE
 * [x] Tutorial 02: https://youtu.be/tvhpeDYVlIw
 * [ ] Tutorial 03: https://youtu.be/E7oj1E4rWII
+* [x] Tutorial 04: https://youtu.be/hQwoVIBpGco
+* [ ] Tutorial 05: https://youtu.be/HOQAsoJuaKQ
+* [ ] Tutorial 06: https://youtu.be/HOQAsoJuaKQ
+* [ ] Tutorial 07: https://youtu.be/HqPrtyBB9Ro
