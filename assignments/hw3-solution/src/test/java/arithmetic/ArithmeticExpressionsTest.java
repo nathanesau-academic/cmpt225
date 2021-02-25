@@ -64,7 +64,7 @@ public class ArithmeticExpressionsTest {
         assert (root != null);
         assert (root.getData() == ArithmeticExpressions.DIV);
         assert(root.getRightChild() != null);
-        assert(root.getRightChild().getData() == 0);
+        assert(root.getRightChild().getData() == 6.0);
         assert(root.getLeftChild() != null);
         assert(root.getLeftChild().getData() == ArithmeticExpressions.MULT);
         assert(root.getLeftChild().getLeftChild() != null);

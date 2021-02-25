@@ -41,7 +41,30 @@ public class ArithmeticExpressions {
 	 * @return
 	 */
 	public static BTNode<Double> postfix2BinaryTree(String postfixExpression) {
-		// TODO implement me
-		return null;
+		// traverse expression from start to end
+		// add number to stack
+		// add operators to tree as parent nodes
+		java.util.Stack<BTNode<Double>> stack = new java.util.Stack<BTNode<Double>>();
+		for (String s : postfixExpression.split(" ")) {
+			try { // s is a number
+				Double d = Double.parseDouble(s);
+				BTNode<Double> node = new BTNode<Double>(d);
+				stack.push(node);
+			}
+			catch (NumberFormatException e) { // s is an operator
+				Double d  = Double.valueOf(opsStr.indexOf(s));
+				BTNode<Double> node = new BTNode<Double>(d);
+				BTNode<Double> right = stack.pop();
+				right.setParent(node);
+				node.setRightChild(right);
+				BTNode<Double> left = stack.pop();
+				left.setParent(node);
+				node.setLeftChild(left);
+				stack.push(node);
+			}
+		}
+
+		BTNode<Double> root = stack.pop();
+		return root;
 	}
 }
