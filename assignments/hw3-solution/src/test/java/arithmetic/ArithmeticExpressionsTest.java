@@ -1,8 +1,5 @@
 package arithmetic;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Test;
 
 import binarytree.BTNode;
@@ -16,33 +13,33 @@ public class ArithmeticExpressionsTest {
     @Test
     public void testInfix2Prefix1() {
 
-        String infix = "+ 1 6";
+        String infix = "( 1 + 6 )";        
         String prefix = ArithmeticExpressions.infix2Prefix(infix);
-        assert(prefix == "( 1 + 6 )");
+        assert(prefix.equals("+ 1 6"));
     }
 
     @Test
     public void testInfix2Prefix2() {
 
-        String infix = "* 10.5 / + 8.6 2.4 5.5";
+        String infix = "( 10.5 * ( ( 8.6 + 2.4 ) / 5.5 ) )";        
         String prefix = ArithmeticExpressions.infix2Prefix(infix);
-        assert(prefix == "( 10.5 * ( ( 8.6 + 2.4 ) / 5.5 ) )");
+        assert(prefix.equals("* 10.5 / + 8.6 2.4 5.5"));
     }
 
     @Test
     public void testInfix2Prefix3() {
 
-        String infix = "/ + 6 3 - 6 / 9 3";
+        String infix = "( ( 6 + 3 ) / ( 6 - ( 9 / 3 ) ) )";
         String prefix = ArithmeticExpressions.infix2Prefix(infix);
-        assert(prefix == "( ( 6 + 3 ) / ( 6 - ( 9 / 3 ) ) ) ");
+        assert(prefix.equals("/ + 6 3 - 6 / 9 3"));
     }
 
     @Test
     public void testInfix2Prefix4() {
 
-        String infix = "/ + 1.1 0.4 - + 7.9 0.0 ";
+        String infix = "( ( 1.1 + 0.4 ) / ( ( 7.9 + 0 ) - ( 13.25 + 18.04 ) ) )";
         String prefix = ArithmeticExpressions.infix2Prefix(infix);
-        assert(prefix == "( ( 1.1 + 0.4 ) / ( ( 7.9 + 0 )  - ( 13.25 + 18.04 ) ) ) ");
+        assert(prefix.equals("/ + 1.1 0.4 - + 7.9 0 + 13.25 18.04"));
     }
 
     @Test
