@@ -21,5 +21,5 @@ Time taken:
 
 * Setting up project: 30 min
 * Understanding tasks: 30 min
-* Writing code: ?
-* Total: ? hr
+* Writing code: 5 hr
+* Total: 6 hr
