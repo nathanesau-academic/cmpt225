@@ -44,12 +44,16 @@ public class BTNode<T> {
 
 	public void setLeftChild(BTNode<T> leftChild) {
 		this.leftChild = leftChild;
-		leftChild.parent = this;
+		if (leftChild != null) {
+			leftChild.parent = this;
+		}
 	}
 
 	public void setRightChild(BTNode<T> rightChild) {
 		this.rightChild = rightChild;
-		rightChild.parent = this;
+		if (rightChild != null) {
+			rightChild.parent = this;
+		}
 	}
 
 	public void setParent(BTNode<T> parent) {

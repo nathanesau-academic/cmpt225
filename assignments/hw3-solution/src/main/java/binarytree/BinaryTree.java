@@ -15,65 +15,48 @@ public class BinaryTree<T> {
 		return root;
 	}
 
+	public void invertArr(List<BTNode<T>> arr) {
+		for (var node : arr) {
+			var tmp = node.getLeftChild();
+			node.setLeftChild(node.getRightChild());
+			node.setRightChild(tmp);
+		}
+	}
+
 	/**
 	 * reverse the tree so that the result
 	 * is a mirror image of the original tree
 	 */
-	public void mirrorInverse() {
-		class NDPair {
-			BTNode<T> node;
-			int depth;
-
-			NDPair(BTNode<T> node, int depth) {
-				this.node = node;
-				this.depth = depth;
-			}
-		};
-
-		class Helper {
-			void invertLevel(List<BTNode<T>> levelNodes) {
-				int left = 0;
-				int right = levelNodes.size() - 1;
-				while (left < right) {
-					BTNode<T> leftNode = levelNodes.get(left);
-					BTNode<T> rightNode = levelNodes.get(right);
-					T tmp = leftNode.getData();
-					leftNode.setData(rightNode.getData());
-					rightNode.setData(tmp);
-					left += 1;
-					right -= 1;
-				}
-			}
-		}
-
-		Helper helper = new Helper();
-
-		// uses level order traversal
-		int level = 0;
-		List<BTNode<T>> levelNodes = new ArrayList<BTNode<T>>();
-		List<NDPair> q = new ArrayList<NDPair>();
-		q.add(new NDPair(root, 0));
+	public void mirrorInverse() 
+	{
+		var q = new ArrayList<>(Arrays.asList(new AbstractMap.SimpleImmutableEntry<>(root, 0)));
+		int max_depth = 0;
+		var arr = new ArrayList<BTNode<T>>();
+		
+		// use level order traversal
 		while (!q.isEmpty()) {
-			NDPair ndPair = q.remove(0);
-			if (ndPair.depth > level) { // invert the previous level
-				helper.invertLevel(levelNodes);
-				level += 1;
-				levelNodes.clear();
+			var entry = q.remove(0);
+			BTNode<T> node = entry.getKey();
+			int depth = entry.getValue();
+
+			if (depth > max_depth) { // invert the previous level
+				invertArr(arr);
+				max_depth = Math.max(depth, max_depth);
+				arr.clear();
 			}
 
-			// visit the node
-			levelNodes.add(ndPair.node);
+			arr.add(node);
 
-			if (ndPair.node.getLeftChild() != null) {
-				q.add(new NDPair(ndPair.node.getLeftChild(), ndPair.depth+1));
+			if (node.getLeftChild() != null) {
+				q.add(new AbstractMap.SimpleImmutableEntry<>(node.getLeftChild(), depth+1));
 			}
 			
-			if (ndPair.node.getRightChild() != null) {
-				q.add(new NDPair(ndPair.node.getRightChild(), ndPair.depth+1));
+			if (node.getRightChild() != null) {
+				q.add(new AbstractMap.SimpleImmutableEntry<>(node.getRightChild(), depth+1));
 			}
 		}
 
-		helper.invertLevel(levelNodes);
+		invertArr(arr);		
 	}
 
 	/**
