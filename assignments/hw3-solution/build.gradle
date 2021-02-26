@@ -49,6 +49,14 @@ task copyBinaryTree(type: Copy) {
 	into 'tmp/src/binarytree'
 }
 
+task copyTests(type: Copy) {
+	from 'src/main/java/TestArithmeticExpressions.java'
+	into 'tmp/src'
+
+	from 'src/main/java/TestBinTrees.java'
+	into 'tmp/src'
+}
+
 task zipTmp(type: Zip) {
 	from "tmp"
 	destinationDir = file(".")
@@ -60,5 +68,10 @@ task deleteTmp(type: Delete) {
 }
 
 // creates assignment3.zip in current folder
-task createSubmission(dependsOn: ['copyArithmetic', 'copyBinaryTree', 'zipTmp', 'deleteTmp'])
+task createSubmission(dependsOn: ['copyArithmetic', 'copyBinaryTree', 'copyTests', 'zipTmp', 'deleteTmp'])
+zipTmp.mustRunAfter copyArithmetic
+zipTmp.mustRunAfter copyBinaryTree
+zipTmp.mustRunAfter copyTests
+copyTests.mustRunAfter copyArithmetic
+copyTests.mustRunAfter copyBinaryTree
 deleteTmp.mustRunAfter zipTmp
