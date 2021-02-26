@@ -67,7 +67,7 @@ public class BinaryTree<T> {
 	 * @param inOrder in-order traversal for the tree.
 	 * @return the binary tree corresponding to the in-order and pre-order traversal.
 	 */
-	public static <T> BinaryTree<T> createFromPreorderInorder(List<T> preOrder, List<T> inOrder) {
+	public static <T> BinaryTree<T> createFromPreorderInorder(List<T> inOrder, List<T> preOrder) {
 		
 		class Helper {
 			BTNode<T> construct_tree(List<T> preOrder, List<T> inOrder, BTNode<T> parent) {

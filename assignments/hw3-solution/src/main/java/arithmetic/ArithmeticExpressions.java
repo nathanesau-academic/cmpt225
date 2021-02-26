@@ -48,9 +48,10 @@ public class ArithmeticExpressions {
 
 	public static String infix2Postfix(String infixExpression) {
 
+		String expression = infixExpression.replaceAll(" +", " ");
 		java.util.Stack<String> stack = new java.util.Stack<String>();
 		String postfix = "";
-		for (String s : infixExpression.split(" ")) {
+		for (String s : expression.split(" ")) {
 			if (ArithmeticExpressions.isNumber(s)) { // s is a number
 				postfix += s + " ";
 			}
@@ -92,7 +93,8 @@ public class ArithmeticExpressions {
 		// 2. invert parentheses
 		// 3. convert to postfix
 		// 4. reverse postfix
-		String infix = invertParentheses(reverse(infixExpression));
+		String expression = infixExpression.replaceAll(" +", " ");
+		String infix = invertParentheses(reverse(expression));
 		String postfix = infix2Postfix(infix);
 		String prefix = reverse(postfix);
 		return prefix.strip();
