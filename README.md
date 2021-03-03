@@ -25,7 +25,8 @@ Lecture Links:
 * [x] Lecture 16: https://youtu.be/I6cvshQDurk
 * [x] Lecture 17: https://youtu.be/HqPrtyBB9Ro
 * [x] Lecture 18: https://youtu.be/J8he4Xh2_wo
-* [ ] Lecture 19
+* [x] Lecture 19: https://youtu.be/ShbYh39zhpE
+* [ ] Lecture 20
 
 Tutorial Links:
 
@@ -34,5 +35,4 @@ Tutorial Links:
 * [ ] Tutorial 03: https://youtu.be/E7oj1E4rWII
 * [x] Tutorial 04: https://youtu.be/hQwoVIBpGco
 * [ ] Tutorial 05: https://youtu.be/HOQAsoJuaKQ
-* [ ] Tutorial 06: https://youtu.be/HOQAsoJuaKQ
-* [ ] Tutorial 07: https://youtu.be/HqPrtyBB9Ro
+* [ ] Tutorial 06: https://youtu.be/XThYBbGKf44
