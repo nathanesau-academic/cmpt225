@@ -44,6 +44,11 @@ task copyGraph(type: Copy) {
 	into 'tmp/src/graph'
 }
 
+task copyTests(type: Copy) {
+	from 'src/main/java/TestGraphs.java'
+	into 'tmp/src'
+}
+
 task zipTmp(type: Zip) {
 	from "tmp"
 	destinationDir = file(".")
@@ -54,6 +59,9 @@ task deleteTmp(type: Delete) {
 	delete 'tmp'
 }
 
-// creates assignment3.zip in current folder
-task createSubmission(dependsOn: ['copyGraph', 'zipTmp', 'deleteTmp'])
+// creates assignment4.zip in current folder
+task createSubmission(dependsOn: ['copyGraph', 'copyTests', 'zipTmp', 'deleteTmp'])
+zipTmp.mustRunAfter copyGraph
+zipTmp.mustRunAfter copyTests
+copyTests.mustRunAfter copyGraph
 deleteTmp.mustRunAfter zipTmp
