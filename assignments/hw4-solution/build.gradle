@@ -54,6 +54,6 @@ task deleteTmp(type: Delete) {
 	delete 'tmp'
 }
 
-// creates assignment3.zip in current folder
+// creates assignment4.zip in current folder
 task createSubmission(dependsOn: ['copyGraph', 'zipTmp', 'deleteTmp'])
 deleteTmp.mustRunAfter zipTmp
