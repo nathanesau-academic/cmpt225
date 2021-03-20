@@ -28,13 +28,19 @@ Lecture Links:
 * [x] Lecture 19: https://youtu.be/ShbYh39zhpE
 * [x] Lecture 20: https://youtu.be/am5c4Lk-gU0
 * [x] Lecture 21: https://youtu.be/eSodIIfMR7M
+* [x] PracticeMT: https://youtu.be/RRyykMSe4pY
+* [x] Lecture 22: https://youtu.be/7jIomMOKhLc
+* [x] Lecture 23: https://youtu.be/MzwYt5DJfy8
+* [x] Lecture 24: https://youtu.be/1wcLFMtXzAw
 
 Tutorial Links:
 
 * [x] Tutorial 01: https://youtu.be/7MtmRLAdLeE
 * [x] Tutorial 02: https://youtu.be/tvhpeDYVlIw
-* [ ] Tutorial 03: https://youtu.be/E7oj1E4rWII
+* [x] Tutorial 03: https://youtu.be/E7oj1E4rWII
 * [x] Tutorial 04: https://youtu.be/hQwoVIBpGco
-* [ ] Tutorial 05: https://youtu.be/HOQAsoJuaKQ
-* [ ] Tutorial 06: https://youtu.be/XThYBbGKf44
+* [x] Tutorial 05: https://youtu.be/HOQAsoJuaKQ
+* [x] Tutorial 06: https://youtu.be/XThYBbGKf44
 * [x] Tutorial 07: https://youtu.be/yiJs_Xr4-gM
+* [x] Tutorial 08: https://youtu.be/Oj1nee1CBWc
+* [x] Tutorial 09: https://youtu.be/j4URl7vidls
