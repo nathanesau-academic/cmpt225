@@ -1,6 +1,11 @@
 package graph;
 
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class DenseGraph {
 
@@ -59,8 +64,11 @@ public class DenseGraph {
 	 * @return the degree of i
 	 */
 	public int degree(int i) {
-		// TODO Auto-generated method stub
-		return 0;
+		int total = 0;
+		for (int k = 0; k < nvertex; k++) {
+			total += adjMatrix[i][k];
+		}
+		return total;
 	}
 	
 	/**
@@ -70,24 +78,57 @@ public class DenseGraph {
 	 * @return an iterator that returns the neighbors of i
 	 */
 	public Iterator<Integer> neighboursIterator(int i) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		class NeighboursIterator implements Iterator<Integer> {
+
+			List<Integer> neighbors;
+
+			int index;
+
+			public NeighboursIterator(int[][] adjMatrix, int i, int nvertex) {
+				this.neighbors = IntStream
+						.range(0, adjMatrix[i].length)
+						.filter(k -> adjMatrix[i][k] != 0)
+						.boxed()
+						.collect(Collectors.toList());
+				this.index = 0;
+			}
+
+			@Override
+			public boolean hasNext() {
+				return index < neighbors.size();
+			}
+
+			@Override
+			public Integer next() {
+				Integer value = neighbors.get(index);
+				index += 1;
+				return value;
+			}
+
+		}
+
+		return new NeighboursIterator(adjMatrix, i, nvertex);
 	}
 
 	/**
 	 * @return number of vertices in the graph
 	 */
 	public int numberOfVertices() {
-		// TODO Auto-generated method stub
-		return 0;
+		return nvertex;
 	}
 
 	/**
 	 * @return number of edges in the graph
 	 */
 	public int numberOfEdges() {
-		// TODO Auto-generated method stub
-		return 0;
+		int total = 0;
+		for (int i = 0; i < nvertex; i++) {
+			for (int j = 0; j < nvertex; j++) {
+				total += adjMatrix[i][j];
+			}
+		}
+		return total / 2;
 	}
 
 	/**
@@ -95,7 +136,48 @@ public class DenseGraph {
 	 * @return distance between i and j in the graph
 	 */
 	public int distance(int i, int j) {
-		// TODO Auto-generated method stub
+
+		class QueueEntry implements Comparable<QueueEntry> {
+
+			Integer dist;
+			
+			Integer node;
+
+			public QueueEntry(Integer dist, Integer node) {
+				this.dist = dist;
+				this.node = node;
+			}
+
+			@Override
+			public int compareTo(QueueEntry o) {
+				return Integer.compare(dist, o.dist);
+			}
+			
+		}
+
+		PriorityQueue<QueueEntry> q = new PriorityQueue<>();
+		q.add(new QueueEntry(0, i));
+
+		int[] distances = new int[nvertex];
+		Arrays.fill(distances, Integer.MAX_VALUE);
+
+		while (!q.isEmpty()) {
+			var entry = q.remove();
+			if (entry.node == j) {
+				return entry.dist;
+			}
+
+			for (int k = 0; k < nvertex; k++) {
+				if (adjMatrix[entry.node][k] != 0) {
+					Integer alt = entry.dist + 1;
+					if (alt < distances[k]) {
+						distances[k] = alt;
+						q.add(new QueueEntry(alt, k));
+					}
+				}
+			}
+		}
+
 		return 0;
 	}
 
@@ -105,8 +187,21 @@ public class DenseGraph {
 	 * @return a random graph on n vertices, where each edge is added to the graph with probability p
 	 */
 	public static DenseGraph generateRandomGraph(int n, double p) {
-		// TODO Auto-generated method stub
-		return null;
+		DenseGraph graph = new DenseGraph(n);
+		int[][] generated = new int[n][n];
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (generated[i][j] == 0 && generated[j][i] == 0) {
+					double r = Math.random();
+					if (r < p) {
+						graph.addEdge(i, j);
+					}
+					generated[i][j] = 1;
+					generated[j][i] = 1;
+				}
+			}
+		}
+		return graph;
 	}
 
 }

@@ -21,7 +21,6 @@ public class DenseGraphTest {
 		graph.addEdge(4,5);
 		graph.addEdge(5,6);
 
-
         return graph;
     }
 
@@ -72,10 +71,10 @@ public class DenseGraphTest {
     @org.junit.Test
     public void testDegree() {
         
-        // TODO
-        int x = 5;
+        DenseGraph graph = getGraph1();
 
-        assert (x == 5);
+        assert (graph.degree(1) == 3);
+        assert (graph.degree(2) == 6);
     }
 
     @org.junit.Test
@@ -94,19 +93,17 @@ public class DenseGraphTest {
     @org.junit.Test
     public void testNumberOfVertices() {
         
-        // TODO
-        int x = 5;
+        DenseGraph graph = getGraph1();
 
-        assert (x == 5);
+        assert (graph.numberOfVertices() == 7);
     }
 
     @org.junit.Test
     public void testNumberOfEdges() {
 
-        // TODO
-        int x = 5;
+        DenseGraph graph = getGraph1();
 
-        assert (x == 5);
+        assert (graph.numberOfEdges() == 12);
     }
 
     @org.junit.Test
