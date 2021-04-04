@@ -28,6 +28,14 @@ Lecture Links:
 * [x] Lecture 19: https://youtu.be/ShbYh39zhpE
 * [x] Lecture 20: https://youtu.be/am5c4Lk-gU0
 * [x] Lecture 21: https://youtu.be/eSodIIfMR7M
+* [x] Lecture 22: https://youtu.be/7jIomMOKhLc
+* [ ] Lecture 23: https://youtu.be/MzwYt5DJfy8
+* [ ] Lecture 24: https://youtu.be/1wcLFMtXzAw
+* [ ] Lecture 25: https://youtu.be/7qGTlpMUk78
+* [ ] Lecture 26: https://youtu.be/Owk8B0WoobQ
+* [ ] Lecture 27: https://youtu.be/L_BCQzsTX7E
+* [ ] Lecture 28: https://youtu.be/NZff5MUUI3Y
+* [ ] Lecture 29: https://youtu.be/WJUZpA48gTA
 
 Tutorial Links:
 
@@ -38,3 +46,6 @@ Tutorial Links:
 * [ ] Tutorial 05: https://youtu.be/HOQAsoJuaKQ
 * [ ] Tutorial 06: https://youtu.be/XThYBbGKf44
 * [x] Tutorial 07: https://youtu.be/yiJs_Xr4-gM
+* [x] Tutorial 08: https://youtu.be/Oj1nee1CBWc
+* [ ] Tutorial 09: https://youtu.be/j4URl7vidls
+* [ ] Tutorial 10: https://youtu.be/eBTKcGdbqF4
