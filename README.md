@@ -37,6 +37,8 @@ Lecture Links:
 * [ ] Lecture 27: https://youtu.be/L_BCQzsTX7E
 * [ ] Lecture 28: https://youtu.be/NZff5MUUI3Y
 * [ ] Lecture 29: https://youtu.be/WJUZpA48gTA
+* [ ] Lecture 30: https://youtu.be/miAREwlvj9E
+* [ ] Lecture 31: https://youtu.be/WsGjzmpT2GI
 
 Tutorial Links:
 
@@ -50,3 +52,4 @@ Tutorial Links:
 * [x] Tutorial 08: https://youtu.be/Oj1nee1CBWc
 * [x] Tutorial 09: https://youtu.be/j4URl7vidls
 * [ ] Tutorial 10: https://youtu.be/eBTKcGdbqF4
+* [ ] Tutorial 11: https://youtu.be/EtTcn835E8E
