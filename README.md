@@ -39,6 +39,9 @@ Lecture Links:
 * [ ] Lecture 29: https://youtu.be/WJUZpA48gTA
 * [ ] Lecture 30: https://youtu.be/miAREwlvj9E
 * [ ] Lecture 31: https://youtu.be/WsGjzmpT2GI
+* [ ] Lecture 32: https://youtu.be/Awrs3XQaHIU
+* [ ] Lecture 33: https://youtu.be/aUQvVDOrF50
+* [ ] ReviewBeforeFinal: https://youtu.be/vSKooRv-Y6c
 
 Tutorial Links:
 
@@ -53,3 +56,7 @@ Tutorial Links:
 * [x] Tutorial 09: https://youtu.be/j4URl7vidls
 * [ ] Tutorial 10: https://youtu.be/eBTKcGdbqF4
 * [ ] Tutorial 11: https://youtu.be/EtTcn835E8E
+
+References:
+
+* https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
