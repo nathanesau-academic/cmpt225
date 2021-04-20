@@ -18,23 +18,13 @@ public class TestUnionFind<T> {
 		Node n7 = UnionFind.makeSet(7);
 		Node n8 = UnionFind.makeSet(8);
 
-		//testSameSet(n1, n2);
-		//System.out.println("union(n1, n3)");
-		//UnionFind.union(n1, n3);
-		//System.out.println("union(n4, n5)");
-		//UnionFind.union(n4, n5);
-		//System.out.println("union(n2, n5)");
-		//UnionFind.union(n2, n5);
-		//testSameSet(n1, n2);
-		//System.out.println("union(n1, n4)");
-		//UnionFind.union(n1, n4);
-		//testSameSet(n1, n2);
-
 		UnionFind.union(n1, n2);
 		UnionFind.union(n3, n4);
 		UnionFind.union(n3, n5);
 		UnionFind.union(n1, n6);
 		UnionFind.union(n1, n7);
 		UnionFind.union(n8, n1);
+
+		System.out.println("done");
 	}	
 }
