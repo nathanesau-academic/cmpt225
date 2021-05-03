@@ -30,18 +30,18 @@ Lecture Links:
 * [x] Lecture 21: https://youtu.be/eSodIIfMR7M
 * [x] PracticeMT: https://youtu.be/RRyykMSe4pY
 * [x] Lecture 22: https://youtu.be/7jIomMOKhLc
-* [ ] Lecture 23: https://youtu.be/MzwYt5DJfy8
-* [ ] Lecture 24: https://youtu.be/1wcLFMtXzAw
-* [ ] Lecture 25: https://youtu.be/7qGTlpMUk78
-* [ ] Lecture 26: https://youtu.be/Owk8B0WoobQ
-* [ ] Lecture 27: https://youtu.be/L_BCQzsTX7E
-* [ ] Lecture 28: https://youtu.be/NZff5MUUI3Y
-* [ ] Lecture 29: https://youtu.be/WJUZpA48gTA
-* [ ] Lecture 30: https://youtu.be/miAREwlvj9E
-* [ ] Lecture 31: https://youtu.be/WsGjzmpT2GI
-* [ ] Lecture 32: https://youtu.be/Awrs3XQaHIU
-* [ ] Lecture 33: https://youtu.be/aUQvVDOrF50
-* [ ] ReviewBeforeFinal: https://youtu.be/vSKooRv-Y6c
+* [x] Lecture 23: https://youtu.be/MzwYt5DJfy8
+* [x] Lecture 24: https://youtu.be/1wcLFMtXzAw
+* [x] Lecture 25: https://youtu.be/7qGTlpMUk78
+* [x] Lecture 26: https://youtu.be/Owk8B0WoobQ
+* [x] Lecture 27: https://youtu.be/L_BCQzsTX7E
+* [x] Lecture 28: https://youtu.be/NZff5MUUI3Y
+* [x] Lecture 29: https://youtu.be/WJUZpA48gTA
+* [x] Lecture 30: https://youtu.be/miAREwlvj9E
+* [x] Lecture 31: https://youtu.be/WsGjzmpT2GI
+* [x] Lecture 32: https://youtu.be/Awrs3XQaHIU
+* [x] Lecture 33: https://youtu.be/aUQvVDOrF50
+* [x] ReviewBeforeFinal: https://youtu.be/vSKooRv-Y6c
 
 Tutorial Links:
 
@@ -54,8 +54,8 @@ Tutorial Links:
 * [x] Tutorial 07: https://youtu.be/yiJs_Xr4-gM
 * [x] Tutorial 08: https://youtu.be/Oj1nee1CBWc
 * [x] Tutorial 09: https://youtu.be/j4URl7vidls
-* [ ] Tutorial 10: https://youtu.be/eBTKcGdbqF4
-* [ ] Tutorial 11: https://youtu.be/EtTcn835E8E
+* [x] Tutorial 10: https://youtu.be/eBTKcGdbqF4
+* [x] Tutorial 11: https://youtu.be/EtTcn835E8E
 
 References:
 
